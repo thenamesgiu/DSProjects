@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+       <!--Elementos de head, como o título da página, e informações sobre os dados como o nome do autor da página, janela de exibição,
+        especificação da codificação de caracteres para a exibição do documento HTML, além da tag de estilização de elementos-->
+        <title>Tabela PWI</title>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Ana Giulia Moreira de Lima"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       	<style>
+       		body{
+              /*Determina a margem do corpo da página*/
+           			margin:0;
+           			background-color: #deffc7;
+       		}
+          /*Rodape da página*/
+       		footer{
+                /*Modifica a cor de fundo do footer, utilizando de um código hexadecimal para a cor escolhida*/
+             			background-color:#3e4d34;
+                 /*Dimensão do preenchimento do footer*/
+             			padding: 1px;
+             			text-align: center;
+                /*Texto dentro do footer será branco*/
+             			color: white;
+                /*Tamanho da fonte do texto encontrado no footer*/
+             			font-size: 11px;
+                /*Modificação da fonte utilizada no texto, utiliza-se New Courier*/
+             			font-family: new courier;
+                /*Proppriedades com respectivos valores que fazem com que o footer fique no final de uma página independente do tamanho de conteúdo encontrado antes dele*/
+             			position: absolute;
+                  bottom: 0;
+                  width: 100%;
+                  height: 40px;
+                /*Propriedades para que a sombra do footer fique na parte de cima, podendo dar o efeito certo na página*/
+                  box-shadow: -2px -4px -5px #8CA679;
+                  -webkit-box-shadow: 0px -4px 5px 0px #8CA679;
+      				    -moz-box-shadow: 0px -4px 5px 0px #8CA679;
+                /*Propriedade para aplicação de sombra no escrito dentro do footer*/
+      				    text-shadow: 2px 2px 4px #192411;
+          } 
+          /*Cabeçalho da página*/    		
+       		header{
+       			    /*Centraliza o texto do header*/
+             			text-align:center;
+                /*Dimensão do preenchimento do header*/
+             			padding: 1px ;
+                /*Modificação da cor do header, com código hexadecimal para a cor escolhida*/
+             			background-color: #617752;
+                /*O texto contido no header será branco*/
+             			color: white;
+             			font-family: verdana;
+                  /*Com isso, o conteúdo é cortado e nenhuma barra de rolagem será exibida para ele*/
+             			overflow: hidden;
+                /*Box-shadow utilizado com 3 medidas para obter um resultado "esfumaçado", junto a um código hexadecimal para a cor da sombra*/
+             			box-shadow: 2px 4px 5px #b6d5a0;
+                /*Sombra para o texto, utilizando 3 medidas para obter um resultado "esfumaçado", junto a um código hexadecimal para a cor da sombra*/
+             			text-shadow: 2px 2px 4px #2b3822;
+       		}
+            /*Estilização da tabela, dados e cabeçalho.*/
+       		th, table, td{
+                       /*Define a dimensão e cor da borda da tabela.*/
+                 			    border: 1px solid #08290c; 
+                       /* Define o colapso de bordas, o quão juntas estarão umas das outras, usando "collapse", as bordas estarão juntas, sem espaço entre si.*/
+                 			    border-collapse: collapse; 
+                 		   /*Preenchimento da tabela, medida de 8px, foi utilizado para dar maior espaço para os dados da tabela e o escrito no cabeçalho da mesma, afastando-os um pouco das bordas.*/
+                          padding: 8px; 
+                       /*Centraliza o texto dos elementos.*/
+                          text-align: center;
+       		} 
+            /*Estilização do cabeçalho da tabela*/
+       		th{
+       	    /*Modifica a fonte de texto, utilizando a fonte Cambria.*/
+       			  font-family:cambria;
+            /*Modifica o tamanho do texto, utilizada a medida de 25px*/
+       			  font-size: 25px;
+            /*Modifica a cor do texto encontrado no cabeçalho, usado um código hexadecimal da cor escolhida*/
+       			  color: #013506;
+       		}
+            /*Estilização das células da tabela*/
+       		td{
+       			/*Modifica a fonte de texto, utilizando a fonte Verdana.*/
+       			  font-family: verdana;
+       		}
+            /*Estilização apenas de linhas em posição par na tabela (Ex.: 2ª linha, 4ª linha, ...).*/
+       		tr:nth-child(even){
+                            /*Modificação da cor de fundo das células encontradas nas linhas de posição par, utilizado um código hexadecimal para a cor escolhida*/
+                         			background-color: #a8ffa6;
+                            /*Sombra para o texto, utilizando 3 medidas para obter um resultado "esfumaçado", junto a um código hexadecimal para a cor da sombra*/
+                         			text-shadow: 2px 2px 4px #51974F;
+       		}
+            /*Estilização apenas de linhas em posição ímpar na tabela (Ex.: 1ª linha, 3ª linha, ...).*/
+       		tr:nth-child(odd){
+                            /*Modificação da cor de fundo das células encontradas nas linhas de posição ímpar, utilizado um código hexadecimal para a cor escolhida*/
+                         			background-color: #8cdf8a;
+                            /*Sombra para o texto, utilizando 3 medidas para obter um resultado "esfumaçado", junto a um código hexadecimal para a cor da sombra*/
+                         			text-shadow: 2px 2px 4px #487848;
+       		}
+            /*Estilização da tabela*/
+       		table{
+                /*left, top, position e transform com os seguintes valores com o objetivo de centralizar a tabela no meio da página*/
+             			left: 50%;
+             			top: 50%;
+             			position: absolute;
+             			transform: translate(-50%,-50%);
+                /*Box-shadow utilizado com 3 medidas para obter um resultado "esfumaçado", junto a um código hexadecimal para a cor da sombra, este, define a sombra da tabela sobre a página.*/
+             			box-shadow: 5px 7px 8px #b6d5a0;
+       		}		
+       	</style>
+    </head>
+    <!--Corpo da página, todas as tags utilizadas terão as alterações de estilo feitas na tag style-->
+    <body>
+      <!--Cabeçalho-->
+    	<header>
+    			<h2 > Celebridades mais bem pagas de 2019 </h2>
+    	</header>
+      <!--Tabela-->
+    		<table>
+          <!--Linhas-->
+	    		<tr>
+            <!--Cabeçalho (4 colunas)-->
+	    			<th> Nome </th>
+	    			<th> Ocupação</th>
+	    			<th> Idade </th>
+	    			<th> Valor recebido (US$)</th>
+	    		</tr>
+	    		<tr>
+          <!--Células da tabela-->
+	    			<td> Taylor Swift</td>
+	    			<td> Cantora </td>
+	    			<td>30 anos</td>
+	    			<td> 186 milhões </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Kylie Jenner</td>
+	    			<td> Personalidade da mídia</td>
+	    			<td> 22 anos </td>
+	    			<td> 170 milhões </td>
+	    		</tr>
+	    		<tr>
+	    			<td> Kanye West </td>
+	    			<td> Rapper </td>
+	    			<td> 42 anos </td>
+	    			<td> 150 milhões </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Lionel Messi</td>
+	    			<td> Jogador de futebol </td>
+	    			<td> 32 anos </td>
+	    			<td> 127 milhões</td>
+	    		</tr>
+	    		<tr>
+	    			<td> Ed Sheeran </td>
+	    			<td> Cantor </td>
+	    			<td> 29 anos </td>
+	    			<td> 110 milhões </td>
+	    		</tr>
+    		</table>
+      <!--Rodapé da página-->
+    	<footer><p>Por: Ana Giulia </p></footer>
+    </body>
+</html>
